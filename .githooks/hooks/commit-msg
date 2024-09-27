@@ -1,0 +1,8 @@
+#!/bin/sh
+
+commit_message=$(cat "$1")
+
+if ! echo "$commit_message" | grep -Eq "^Feature.*[0-9]+$"; then
+  echo "Error: Commit message must start with 'Feature' and end with a number (e.g., 'Feature branch ID-21')."
+  exit 1
+fi
