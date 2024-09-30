@@ -5,7 +5,7 @@ on:
     types: [opened, synchronize, reopened]
   push:
     branches:
-      - feature/bugfix/release/0.1 # You can change this to trigger only on certain branches if necessary
+      - "**" # You can change this to trigger only on certain branches if necessary
 
 jobs:
   validate-branch-name:
